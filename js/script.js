@@ -14,7 +14,7 @@ dumdumYes.addEventListener("click", () => {
   dumbModal.classList.toggle("active");
 });
 
-dumdumNo.addEventListener("mouseover", () => {
+dumdumNo.addEventListener("click", () => {
   // let randomPosSmall = Math.round(Math.random() * 50);
   let randomPosBig = Math.round(Math.random() * 100);
   let randomPosBeeg = Math.round(Math.random() * 100);
