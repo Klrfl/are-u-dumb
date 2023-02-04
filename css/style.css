@@ -43,15 +43,16 @@ main {
   /* background: white; */
   backdrop-filter: blur(1rem);
   outline: 1px solid;
-  padding: 2em 5em;
-  min-width: 400px;
-  min-height: 400px;
+  padding: 2em;
+  width: min(100%, 50vh);
+  min-height: 50%;
   position: relative;
 }
 
 .buttons-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
 }
 
 button {
