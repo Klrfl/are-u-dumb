@@ -15,15 +15,19 @@ dumdumYes.addEventListener("click", () => {
 });
 
 dumdumNo.addEventListener("click", () => {
-  // let randomPosSmall = Math.round(Math.random() * 50);
-  let randomPosBig = Math.round(Math.random() * 100);
-  let randomPosBeeg = Math.round(Math.random() * 100);
+  let posX = Math.round(Math.random() * 150);
+  let posY = Math.round(Math.random() * 200);
+  let minusPlus = Math.round(Math.random());
 
-  dumdumNo.style.position = "absolute";
-  dumdumNo.style.right = `${randomPosBig}%`;
-  dumdumNo.style.top = `${randomPosBeeg}%`;
-  // dumdumNo.style.setProperty("transform", `translateX(${randomPosBig}px)`, "");
-  // dumdumNo.style.setProperty("transform", `translateY(${randomPosBig}px)`, "");
+  // if it's time to generate minus num
+  if (minusPlus) {
+    posX = -posX;
+    posY = -posY;
+  } else {
+    posX = -posX;
+  }
+
+  dumdumNo.style.transform = `translateX(${posX}px) translateY(${posY}px)`;
 });
 
 dumbModal.addEventListener("click", () => {
