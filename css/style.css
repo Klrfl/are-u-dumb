@@ -56,6 +56,17 @@ main {
 }
 
 button {
-  padding: 0.5em 1em;
+  all: unset;
+  backdrop-filter: invert(20%);
+  padding: 1rem 1.5rem;
+}
+
+button:hover,
+button:focus-visible {
+  backdrop-filter: invert(35%);
   cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px dashed blue;
 }
