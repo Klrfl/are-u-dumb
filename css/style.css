@@ -21,37 +21,20 @@ main {
 }
 
 .modal {
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 0.8);
   user-select: none;
-  position: absolute;
-  inset: 0;
-
-  display: none;
-  justify-content: center;
-  align-items: center;
+  width: min(90%, 50vh);
+  min-height: 50vh;
 }
 
-#test-modal.active {
-  display: flex;
-}
-
-#dumb-modal.active {
-  display: flex;
-}
-
-.modal-content {
-  /* background: white; */
-  backdrop-filter: blur(1rem);
-  outline: 1px solid;
-  padding: 2em;
-  width: min(100%, 50vh);
-  min-height: 50%;
-  position: relative;
+.modal::backdrop {
+  backdrop-filter: blur(0.5rem);
 }
 
 .buttons-container {
   display: flex;
   justify-content: center;
+  align-self: center;
   gap: 1rem;
 }
 
@@ -59,6 +42,10 @@ button {
   all: unset;
   backdrop-filter: invert(20%);
   padding: 1rem 1.5rem;
+}
+
+button:active {
+  transform: translateY(0.3rem);
 }
 
 button:hover,
