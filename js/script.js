@@ -32,5 +32,5 @@ dumdumNo.addEventListener("click", () => {
 
 dumbModal.addEventListener("click", () => {
   dumbModal.classList.toggle("active");
-  dumdumNo.style.position = "static";
+  dumdumNo.style.transform = "none";
 });
