@@ -6,17 +6,18 @@ let dumdumYes = document.querySelector(".dumb-button--yes");
 let dumdumNo = document.querySelector(".dumb-button--no");
 
 openModal.addEventListener("click", () => {
-  testModal.classList.toggle("active");
+  testModal.showModal();
 });
 
+// if answer == yes
 dumdumYes.addEventListener("click", () => {
-  testModal.classList.toggle("active");
-  dumbModal.classList.toggle("active");
+  dumbModal.showModal();
 });
 
+// if no
 dumdumNo.addEventListener("click", () => {
-  let posX = Math.round(Math.random() * 150);
-  let posY = Math.round(Math.random() * 200);
+  let posX = Math.round(Math.random() * 200);
+  let posY = Math.round(Math.random() * 120);
   let minusPlus = Math.round(Math.random());
 
   // if it's time to generate minus num
@@ -30,7 +31,6 @@ dumdumNo.addEventListener("click", () => {
   dumdumNo.style.transform = `translateX(${posX}px) translateY(${posY}px)`;
 });
 
-dumbModal.addEventListener("click", () => {
-  dumbModal.classList.toggle("active");
+dumbModal.addEventListener("close", () => {
   dumdumNo.style.transform = "none";
 });
